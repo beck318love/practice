@@ -1,0 +1,23 @@
+<h3>Welcome</h3>
+<% if current_user %>
+<div class="column col-md-9" style="margin-left:100px;">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th style="text-align:center;">First Name</th>
+            <th style="text-align:center;">Last Name</th>
+            <th style="text-align:center;">Email</th>
+            <th style="text-align:center;">Phone number</th>
+          </tr>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.first_name %></td>
+              <td><%= user.last_name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.phone_num %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+<% end %>
